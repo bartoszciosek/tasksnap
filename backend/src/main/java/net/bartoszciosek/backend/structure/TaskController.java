@@ -19,6 +19,14 @@ public class TaskController {
         return repository.findAll();
     }
 
+    @PutMapping("/{id}/toggle")
+    public Task toggleTaskStatus(@PathVariable Long id) {
+        var task = repository.findById(id).orElseThrow(() -> new RuntimeException("Task not found"));
+        task.setCompleted(!task.isCompleted());
+
+        return repository.save(task);
+    }
+
     @PostMapping
     public Task createTask(@RequestBody Task task) {
         return repository.save(task);
