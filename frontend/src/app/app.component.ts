@@ -1,11 +1,12 @@
 import { Component, OnInit, signal, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 import { TaskService, Task } from './task.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, DatePipe],
   template: `
     <div style="min-height: 100vh; background-color: #f8fafc; color: #0f172a; padding: 3rem 2rem; font-family: sans-serif;">
 
@@ -40,6 +41,10 @@ import { TaskService, Task } from './task.service';
               <div style="font-size: 1.1rem; font-weight: 500; word-break: break-word; color: #334155; line-height: 1.4;">
                 {{ task.title }}
               </div>
+            </div>
+
+            <div style="font-size: 0.75rem; color: #94a3b8; text-align: right; font-weight: 500;">
+              {{ task.createdAt | date:'dd.MM.yyyy, HH:mm' }}
             </div>
 
           </div>
