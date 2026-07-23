@@ -23,7 +23,6 @@ public class TaskController {
     public Task toggleTaskStatus(@PathVariable Long id) {
         var task = repository.findById(id).orElseThrow(() -> new RuntimeException("Task not found"));
         task.setCompleted(!task.isCompleted());
-
         return repository.save(task);
     }
 

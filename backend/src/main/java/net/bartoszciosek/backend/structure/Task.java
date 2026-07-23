@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
+import static java.time.LocalDateTime.now;
+
 @Entity
 @Table(name = "tasks")
 public class Task {
@@ -11,21 +13,18 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String title;
-    
     private LocalDateTime createdAt;
-    
     private boolean completed;
 
     public Task() {
-        this.createdAt = LocalDateTime.now();
+        this.createdAt = now();
         this.completed = false;
     }
 
     public Task(String title) {
         this.title = title;
-        this.createdAt = LocalDateTime.now();
+        this.createdAt = now();
         this.completed = false;
     }
 
