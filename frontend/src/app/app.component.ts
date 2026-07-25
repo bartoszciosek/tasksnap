@@ -8,12 +8,15 @@ import { TaskService, Task } from './task.service';
   standalone: true,
   imports: [FormsModule, DatePipe],
   template: `
-    <div style="min-height: 100vh; background-color: #f8fafc; color: #0f172a; padding: 3rem 2rem; font-family: sans-serif;">
+    <div
+      style="min-height: 100vh; background-color: #f8fafc; color: #0f172a; padding: 3rem 2rem; font-family: sans-serif;">
 
       <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: center;">
 
-        <div style="width: 220px; height: 220px; background-color: #ffffff; border: 2px dashed #3b82f6; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: center; align-items: center; box-sizing: border-box; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <span style="color: #3b82f6; font-size: 0.85rem; font-weight: bold; margin-bottom: 16px; letter-spacing: 0.5px;">Stwórz zadanie</span>
+        <div
+          style="width: 220px; height: 220px; background-color: #ffffff; border: 2px dashed #18f533; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: center; align-items: center; box-sizing: border-box; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <span
+            style="color: #11e21c; font-size: 0.85rem; font-weight: bold; margin-bottom: 16px; letter-spacing: 0.5px;">Stwórz zadanie</span>
           <input
             [(ngModel)]="newTaskTitle"
             (keyup.enter)="quickAdd()"
@@ -23,7 +26,7 @@ import { TaskService, Task } from './task.service';
           />
           <button
             (click)="quickAdd()"
-            style="margin-top: 16px; width: 100%; background-color: #3b82f6; color: white; border: none; border-radius: 10px; padding: 10px; font-weight: bold; cursor: pointer; font-size: 0.95rem; transition: background 0.2s;">
+            style="margin-top: 16px; width: 100%; background-color: #68fa06; color: white; border: none; border-radius: 10px; padding: 10px; font-weight: bold; cursor: pointer; font-size: 0.95rem; transition: background 0.2s;">
             Dodaj
           </button>
         </div>
@@ -34,7 +37,8 @@ import { TaskService, Task } from './task.service';
 
             <div style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
               <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%;">
-                <span style="font-size: 0.75rem; color: #94a3b8; font-weight: bold; letter-spacing: 0.5px; text-transform: uppercase;">
+                <span
+                  style="font-size: 0.75rem; color: #94a3b8; font-weight: bold; letter-spacing: 0.5px; text-transform: uppercase;">
                   Zadanie #{{ $count - $index }}
                 </span>
                 <span style="font-size: 0.7rem; color: #cbd5e1;">
