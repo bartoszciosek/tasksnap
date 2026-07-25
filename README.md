@@ -10,7 +10,7 @@ TaskSnap is a simple and responsive full-stack task management application (To-D
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### 1. Quick Start (Docker)
 The easiest way to run the entire environment (backend + frontend) with a single command:
