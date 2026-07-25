@@ -42,7 +42,7 @@ import { TaskService, Task } from './task.service';
                   Zadanie #{{ $count - $index }}
                 </span>
                 <span style="font-size: 0.7rem; color: #cbd5e1;">
-                  {{ task.createdAt | date:'HH:mm' }}
+                  {{ task.createdAt | date:'dd.MM HH:mm' }}
                 </span>
               </div>
 
